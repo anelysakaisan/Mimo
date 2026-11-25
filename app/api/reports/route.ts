@@ -1,0 +1,2 @@
+import{NextResponse}from"next/server";import{ownerIdentity}from"../../admin/authorization";import{orderReport}from"../../../db/orders";import{listInventory}from"../../../db/inventory";
+export async function GET(){const o=await ownerIdentity();if(!o.ok)return NextResponse.json({error:"Acesso negado"},{status:o.status});const [sales,inventory]=await Promise.all([orderReport(),listInventory()]);return NextResponse.json({sales,lowStock:inventory.filter(i=>i.quantity<=i.minimum)})}

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794869628697,
+      "tag": "0000_living_falcon",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794869638880,
+      "tag": "0001_friendly_mister_fear",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794870359760,
+      "tag": "0002_left_bedlam",
+      "breakpoints": true
+    }
+  ]
+}

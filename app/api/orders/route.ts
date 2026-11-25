@@ -1,0 +1,3 @@
+import{NextResponse}from"next/server";import{ownerIdentity}from"../../admin/authorization";import{listOrders,updateOrder}from"../../../db/orders";
+export async function GET(){const o=await ownerIdentity();if(!o.ok)return NextResponse.json({error:"Acesso negado"},{status:o.status});return NextResponse.json(await listOrders())}
+export async function PATCH(request:Request){const o=await ownerIdentity();if(!o.ok)return NextResponse.json({error:"Acesso negado"},{status:o.status});const b=await request.json() as Record<string,unknown>;const ok=await updateOrder(String(b.id||""),String(b.status||""),String(b.trackingCode||"").slice(0,100),String(b.trackingUrl||"").slice(0,500),String(b.notes||"").slice(0,1000));return NextResponse.json({ok},{status:ok?200:400})}

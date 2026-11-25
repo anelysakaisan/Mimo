@@ -1,0 +1,4 @@
+import ContactForm from "./contact-form";
+export default function ContactPage() {
+  return <main className="simple-page"><header className="detail-header"><a href="/" className="brand-image"><img src="/mimo-cherry-logo-horizontal.png" alt="Mimo Cherry"/></a><nav><a href="/produtos">Produtos</a><a href="/#como-funciona">Como funciona</a><a href="/contato">Contato</a></nav><a href="/">← Início</a></header><section className="contact-page"><div><p className="eyebrow">VAMOS CONVERSAR?</p><h1>Estamos aqui para ajudar.</h1><p>Dúvidas sobre scoops, preferências, pedidos ou parcerias? Escolha o canal que preferir.</p><a className="contact-option" href="https://www.instagram.com/mimocherryoficial/" target="_blank" rel="noreferrer"><b>◎ Instagram</b><span>@mimocherryoficial</span></a><a className="contact-option" href="mailto:kaisan.oliveiracorp@gmail.com"><b>✉ E-mail</b><span>kaisan.oliveiracorp@gmail.com</span></a></div><ContactForm/></section></main>;
+}
